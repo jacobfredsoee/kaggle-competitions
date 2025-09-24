@@ -1,0 +1,23 @@
+[project]
+name = "kaggle-competitions"
+description = "Repo for notebooks and code for Kaggle competitions using mlflow"
+version = "0.1.0"
+requires-python = ">=3.12"
+
+dependencies = [
+    "mlflow==3.4.0",
+    "keras==3.11.3",
+    "tensorflow-macos==2.16.2",
+    "scikit-learn>=1.7.2",
+    "boto3>=1.40.36",
+    "ipykernel",
+    # Metal GPU acceleration (Mac only)
+    "tensorflow-metal>=1.1.0; platform_system == 'Darwin'",
+    "torch>=2.8.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4.4", "pandas-stubs"]
+
+[dependency-groups]
+dev = ["scikit-learn-stubs>=0.0.3"]
